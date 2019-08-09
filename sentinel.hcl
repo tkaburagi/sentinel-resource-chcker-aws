@@ -1,6 +1,3 @@
-import "tfconfig"
-
-# Main rule that requires other rules to be true
-main = rule {
-  tfconfig.resources not contains "{aws_iam_policy_attachment}"
+policy "resouce-checker" {
+    enforcement_level = "hard-mandatory"
 }
